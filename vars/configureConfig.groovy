@@ -5,7 +5,7 @@ import static groovy.json.JsonOutput.toJson
 def call(jconfig) {
   stage("addjenkins"){
     Yaml parser = new Yaml()
-    jconfig=parser.load("""
+    def jconfig=parser.load("""
         build:
             name: Run Build
             commands: [ 'npm install' ]
