@@ -8,7 +8,7 @@ def call(jconfig) {
     jconfig=parser.load("""
         build:
             name: Run Build
-            commands: npm install
+            commands: [ 'npm install' ]
             cleanupCommands: []
 """)
   }
