@@ -3,10 +3,10 @@ import org.yaml.snakeyaml.Yaml
 import static groovy.json.JsonOutput.prettyPrint
 import static groovy.json.JsonOutput.toJson
 
-def call(jenkinsConfig) {
+def call(jconfig) {
 
     node() {
-        configureConfig()
+        configureConfig(jconfig)
         build(jconfig)
         }
     }
