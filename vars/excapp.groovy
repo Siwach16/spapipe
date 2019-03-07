@@ -7,6 +7,7 @@ def call(jenkfile) {
     def jconfig = [ "jenkfile" : jenkfile]
     node() {
         configureConfig(jconfig)
+        checkoutRepo(jconfig)
         build(jconfig)
         }
     }
