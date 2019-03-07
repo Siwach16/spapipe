@@ -7,9 +7,8 @@ def call() {
     Yaml parser = new Yaml()
     def jconfig=parser.load("""
         build:
-            name:Run Build
-            commands:
-              - npm install
+            name: Run Build
+            commands: npm install
             cleanupCommands: []
 """)
   }
