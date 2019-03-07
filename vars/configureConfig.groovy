@@ -5,11 +5,12 @@ import static groovy.json.JsonOutput.toJson
 def call(jconfig) {
   stage("addjenkins"){
     Yaml parser = new Yaml()
-    def jconfig=parser.load("""
+    def config=parser.load("""
         build:
             name: Run Build
             commands: [ 'npm install' ]
             cleanupCommands: []
 """)
+    jconfig.jenkfile = config
   }
 }
