@@ -7,6 +7,6 @@ def call(jenkinsConfig) {
 
     node() {
         configureConfig()
-        build()
+        build(jconfig)
         }
     }
