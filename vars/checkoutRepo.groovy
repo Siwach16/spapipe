@@ -1,5 +1,5 @@
 def call(jconfig) {
     stage('git'){
-        config.scmVars = checkout scm   
+        jconfig.scmVars = checkout scm   
     }
 }
