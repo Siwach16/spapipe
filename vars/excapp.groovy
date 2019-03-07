@@ -3,8 +3,8 @@ import org.yaml.snakeyaml.Yaml
 import static groovy.json.JsonOutput.prettyPrint
 import static groovy.json.JsonOutput.toJson
 
-def call(jconfig) {
-
+def call(jenkfile) {
+    def jconfig = [ "jenkfile" : jenkfile]
     node() {
         configureConfig(jconfig)
         build(jconfig)
