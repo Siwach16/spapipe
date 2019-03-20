@@ -8,6 +8,17 @@ def call(jenkfile) {
     node() {
         configureConfig(jconfig)
         checkoutRepo(jconfig)
-        build(jconfig)
+        parallel : (
+            "build1" : {
+                node: {
+                    build(jconfig)
+                }
+            }
+            "build2" : {
+                node: {
+                    build(jconfig)
+                }
+            }
+            )
         }
     }
