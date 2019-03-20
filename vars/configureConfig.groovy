@@ -8,7 +8,7 @@ def call(jconfig) {
     def config=parser.load("""
         build:
             name: Run Build
-            commands: [ 'npm install' ]
+            commands: [ 'yarn install --cache-folder .cache' ]
             cleanupCommands: []
 """)
     jconfig.jenkfile = config
